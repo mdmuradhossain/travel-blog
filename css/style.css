@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Anton|Josefin+Sans|Lexend+Deca|Livvic&display=swap");
+
+:root {
+  --text-gray: #3f4954;
+  --text-light: #686666ea;
+  --bg-color: #0f0f0f;
+  --midnight: #104f55;
+  --sky-grad: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+html,
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: Lexend, cursive;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: Abel, cursive;
+  font-size: 1.3rem;
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-family: Livvic, cursive;
+  cursor: pointer;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Navigation */
+.nav {
+  background-color: #fff;
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+  justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons ion-icon {
+  font-size: 1.4rem;
+  color: var(--text-gray);
+}
+
+.collapse {
+  height: 30rem;
+}
+.nav .nav-items {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  padding: 1.6rem 1rem;
+  position: relative;
+  font-size: 1.1rem;
+  font-family: Abel, cursive;
+}
+
+.nav .nav-items .nav-link a {
+  color: var(--text-gray);
+}
+
+.nav .nav-items .nav-link:hover {
+  background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: #fff;
+}
+.nav .nav-brand a {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  display: block;
+  font-family: Lexend, cursive;
+  color: var(--text-gray);
+}
+
+.nav .social {
+  padding: 1.4rem 0;
+}
+
+.nav .social a {
+  padding: 0 0.2rem;
+}
+.nav .social a {
+  color: var(--text-gray);
+}
+
+.nav .social a:hover {
+  color: #a1c4cf;
+}
+/* End Navigation */
+
+/* Main Section */
+
+/* Start Title Section */
+
+.site-title {
+  background: url("../img/Background-image.png");
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+.site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: #fff;
+}
+
+.site-background h1,
+h3 {
+  margin: 0.3rem;
+}
+
+.site-background .btn {
+  margin: 1.8rem;
+  background: var(--sky-grad);
+}
+
+.site-background .btn:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+/* Responsive */
+@media only screen and(max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
